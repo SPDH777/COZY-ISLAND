@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Anime Cozy Island</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Nunito:wght@600;700&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Nunito:wght@600;700&display=swap"></noscript>
 <style>
 :root{--bg:#101c2b;--fg:#f4f6fa;--pk:#e8a04a;box-sizing:border-box}
 html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:system-ui,sans-serif;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
@@ -117,7 +117,38 @@ body[data-fx="1"]>canvas{filter:saturate(1.26) contrast(1.06) brightness(1.04)}
 #dy textarea{background:repeating-linear-gradient(transparent 0 27px,#d9c79c99 27px 28px) local;border:0;border-radius:0;font:600 17px/28px Georgia,'Palatino Linotype',serif;padding:0 8px 0 40px;color:#3a2a1c}
 #dy input[type=text]{border:0;border-bottom:2px solid #c0614a88;border-radius:0;background:#fffdf600;font:italic 700 20px Georgia,serif;padding:6px 8px 6px 40px;color:#5a2e22}
 #mu .em.sv10{font-size:12px;opacity:.8;padding:0 0 6px}
-</style></head><body data-ph="title">
+</style>
+<style>
+/* ===== v29: arranque ===== */
+#boot{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden;
+background:radial-gradient(ellipse at 50% 36%,#4a3470 0,#241f4a 42%,#0b1424 100%);transition:opacity 1.5s ease,visibility 0s linear 1.5s;font-family:'Nunito','Segoe UI',system-ui,sans-serif}
+#boot.out{opacity:0;visibility:hidden;pointer-events:none}
+#boot:before{content:"";position:absolute;left:50%;top:40%;width:80vmin;height:80vmin;margin:-40vmin 0 0 -40vmin;border-radius:50%;background:radial-gradient(circle,#ffb3d155,#ffb3d100 65%);animation:bglow 4s ease-in-out infinite}
+@keyframes bglow{50%{transform:scale(1.14);opacity:.7}}
+#boot .bi{position:relative;display:flex;flex-direction:column;align-items:center;padding:0 20px;animation:bin 1.3s cubic-bezier(.2,.7,.2,1) .35s both}
+@keyframes bin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+#boot .be{font:600 13px 'Nunito',system-ui,sans-serif;letter-spacing:.7em;text-indent:.7em;text-transform:uppercase;opacity:.85}
+#boot .bt{margin:10px 0 0;font:600 clamp(36px,9vw,80px)/1 'Cinzel','Trajan Pro',Georgia,serif;letter-spacing:.14em;text-indent:.14em;background:linear-gradient(#fff,#f3d4a0);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 18px #000b)}
+#boot .bn{width:120px;height:1px;background:linear-gradient(90deg,#0000,#fffc,#0000);margin:22px 0 28px}
+#boot .bb{width:min(260px,62vw);height:3px;border-radius:2px;background:#ffffff26;overflow:hidden}
+#boot .bb i{display:block;height:100%;width:40%;border-radius:2px;background:linear-gradient(90deg,#0000,#f0b45a,#0000);animation:bbar 1.7s ease-in-out infinite}
+@keyframes bbar{from{transform:translateX(-110%)}to{transform:translateX(260%)}}
+#boot .bs{margin-top:16px;font-size:12px;letter-spacing:.3em;text-indent:.3em;text-transform:uppercase;opacity:.65;animation:bpulse 2.4s ease-in-out infinite}
+@keyframes bpulse{50%{opacity:.3}}
+#boot .pt{position:absolute;top:-5%;width:11px;height:8px;border-radius:70% 30% 70% 30%;background:#ffc6dc;opacity:.8;animation:pfall 10s linear infinite;will-change:transform}
+@keyframes pfall{from{transform:translate3d(0,0,0) rotate(0)}to{transform:translate3d(70px,112vh,0) rotate(600deg)}}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+body[data-ph=title] #t1>*{animation:rise 1.3s cubic-bezier(.2,.7,.2,1) both}
+body[data-ph=title] #t1>.eb{animation-delay:.3s}
+body[data-ph=title] #t1>.lg{animation-delay:.5s}
+body[data-ph=title] #t1>.ln{animation-delay:.75s}
+body[data-ph=title] #t1>.sb{animation-delay:.9s}
+body[data-ph=title] #t1>#play{animation-delay:1.15s}
+body[data-ph=title] #t1>#cr{animation-delay:1.3s}
+body[data-ph=title] #t1>#tc{animation-delay:1.4s}
+body[data-ph=title] #t1>.ft{animation-delay:1.6s}
+</style></head><body data-ph="boot">
+<div id="boot"><i class="pt" style="left:6%;animation-duration:9s;animation-delay:-1s"></i><i class="pt" style="left:15%;animation-duration:12s;animation-delay:-6s"></i><i class="pt" style="left:24%;animation-duration:10s;animation-delay:-3s"></i><i class="pt" style="left:33%;animation-duration:13s;animation-delay:-9s"></i><i class="pt" style="left:42%;animation-duration:9s;animation-delay:-5s"></i><i class="pt" style="left:52%;animation-duration:11s;animation-delay:-2s"></i><i class="pt" style="left:61%;animation-duration:12s;animation-delay:-8s"></i><i class="pt" style="left:70%;animation-duration:10s;animation-delay:-4s"></i><i class="pt" style="left:79%;animation-duration:13s;animation-delay:-7s"></i><i class="pt" style="left:88%;animation-duration:9s;animation-delay:-0s"></i><i class="pt" style="left:95%;animation-duration:11s;animation-delay:-5s"></i><i class="pt" style="left:47%;animation-duration:14s;animation-delay:-11s"></i><div class="bi"><div class="be">Anime</div><h1 class="bt">Cozy Island</h1><div class="bn"></div><div class="bb"><i></i></div><div class="bs">Preparando la isla</div></div></div>
 <div id="vg"></div>
 <div id="hud"><b>Cozy Island</b><div id="help"><div><span class="k">W A S D</span>Mover</div><div><span class="k">Shift</span>Correr</div><div><span class="k">E</span>Interactuar</div><div><span class="k">Arrastrar</span>Cámara</div></div></div>
 <button class="btn" id="mute" aria-label="Sonido"><svg viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path class="w" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg></button><button class="btn" id="mus" aria-label="Música">♪</button><button class="btn" id="gfx">Gráficos</button><button class="btn" id="tod">Día</button><button class="btn" id="sit"><span class="k">E</span><span id="sl"></span></button><button class="btn" id="run">Correr</button>
@@ -1637,7 +1668,7 @@ try{TIPS.push('Acércate a los habitantes y pulsa «Hablar»: tienen nombre, per
 })();
 /* =================== FIN PARCHE 11 =================== */
 
-setPhase('title');requestAnimationFrame(loop);
+phase='title';phT=0;requestAnimationFrame(loop);
 </script>
 <!-- ======================================================= -->
 <!-- PARCHE 14 (UNIFICADO = 12 + 13)                          -->
@@ -1935,7 +1966,16 @@ body.pho #ph13{display:block}
     const hx = n => '#' + ('000000' + n.toString(16)).slice(-6);
     const gk = f => f ? 'f' : 'm';
     const LDEF = g => { const o = ORIG[g]; return { hair: hx(o.hair), top: hx(o.top), bot: hx(o.bot), shoe: hx(o.shoe), det: hx(o.det), topS: 0, botS: 0, shoeS: 0, hat: 0, face: 0, back: 0 }; };
-    const getLook = f => Object.assign(LDEF(gk(f)), LOOKS[gk(f)] || {});
+    const LALLOW = {
+      topS: { m: [0, 1, 2, 3, 5, 8, 9], f: [0, 1, 2, 3, 4, 5, 6, 7] },
+      botS: { m: [0, 1, 2], f: [0, 1, 2, 3, 4] },
+      shoeS: { m: [0, 1, 2, 3], f: [0, 1, 2, 3, 4] },
+      hat: { m: [0, 1, 2, 5, 6, 9], f: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] },
+      face: { m: [0, 1, 2, 3], f: [0, 1, 2, 3] },
+      back: { m: [0, 1, 2, 3, 5, 6], f: [0, 1, 2, 3, 4, 5, 6] }
+    };
+    const lkOK = (g, k, i) => !LALLOW[k] || LALLOW[k][g].indexOf(i) > -1;
+    const getLook = f => { const g = gk(f), L = Object.assign(LDEF(g), LOOKS[g] || {}); for (const k in LALLOW) if (!lkOK(g, k, L[k])) L[k] = 0; return L; };
     const saveLooks = () => { try { localStorage.setItem(LKEY, JSON.stringify(LOOKS)); } catch (e) { } };
     const olHex = c => new T.Color(c).multiplyScalar(.42).lerp(new T.Color(0x2a1830), .3).getHex();
     const NUM = s => new T.Color(s).getHex();
@@ -1997,6 +2037,8 @@ body.pho #ph13{display:block}
       if (ts === 5) { X(body, Bx(.2, .2, .03), bot, [0, .92, .125]); [-1, 1].forEach(s => { X(body, Bx(.04, .3, .02), bot, [s * .09, 1.08, .125], null, [0, 0, s * -.08]); X(body, Sp(.022), 0xffe066, [s * .09, .99, .145]); }); }
       if (ts === 6) { X(body, Cy(.2, .19, .03, 18), det, [0, 1.21, 0], [1, 1, .78]); X(body, Sp(.045), det, [0, 1.1, .14], [1.5, 1, .6]); X(body, Sp(.04), det, [-.06, 1.08, .14], [1.2, .8, .6], [0, 0, .5]); X(body, Sp(.04), det, [.06, 1.08, .14], [1.2, .8, .6], [0, 0, -.5]); }
       if (ts === 7) { X(body, Cy(.12, .34, .4, 22), top, [0, 1.0, 0], [1, 1, .9]); X(body, Cy(.345, .345, .04, 22), det, [0, .81, 0], [1, 1, .9]); }
+      if (ts === 8) { [-1, 1].forEach(s => X(body, Bx(.1, .06, .03), 0xffffff, [s * .06, 1.265, .118], null, [0, 0, s * -.55])); X(body, Bx(.045, .3, .022), det, [0, 1.07, .135]); X(body, Sp(.032), det, [0, 1.225, .128]); X(body, Co(.04, .09, 4), det, [0, .9, .136], null, [PI, 0, 0]); }
+      if (ts === 9) { X(body, Cy(.184, .158, .38, 20), det, [0, .96, 0], [1, 1, .78]); X(body, Bx(.07, .3, .02), top, [0, .99, .152]); for (let i = 0; i < 3; i++) X(body, Sp(.016), 0xffe066, [.05, 1.08 - i * .1, .156]); }
       /* ---- cabeza ---- */
       const H = L.hat; if (hd) {
         if (H === 1) { X(hd, new T.SphereGeometry(.335, 20, 12, 0, 6.283, 0, 1.7), det, [0, .03, -.01], null, [-.15, 0, 0]); X(hd, To(.31, .045), shade(det, .8), [0, .09, -.02], null, [PI / 2 - .15, 0, 0]); X(hd, Sp(.07), 0xffffff, [0, .37, -.03]); }
@@ -2053,7 +2095,7 @@ body.pho #ph13{display:block}
     const mLook = mkModal('lk13', 'Vestuario');
     const SW = ['#ffffff', '#f5e6d3', '#ffd6e0', '#ff8fb0', '#e8505b', '#ff9a56', '#ffe066', '#9be37a', '#2fb5b0', '#6ec6ff', '#4a6fd8', '#b794f6', '#7a3f3a', '#3b2a3a', '#222222', '#8a8f98', '#c9a56b', '#2a3f7a'];
     const LCATS = [
-      ['topS', 'Ropa de arriba', ['Original', 'Sudadera', 'Chaqueta', 'Cuello alto', 'Kimono', 'Overol', 'Marinero', 'Poncho']],
+      ['topS', 'Ropa de arriba', ['Original', 'Sudadera', 'Chaqueta', 'Cuello alto', 'Kimono', 'Overol', 'Marinero', 'Poncho', 'Camisa con corbata', 'Chaleco']],
       ['botS', 'Parte de abajo', ['Original', 'Pantalón', 'Short', 'Falda corta', 'Falda larga']],
       ['shoeS', 'Zapatos', ['Originales', 'Botas', 'Botines', 'Zapatillas altas', 'Pantuflas conejo']],
       ['hat', 'Cabeza', ['Nada', 'Gorro de lana', 'Sombrero de paja', 'Orejas de gato', 'Corona de flores', 'Boina', 'Gorra', 'Orejas de conejo', 'Moño grande', 'Aureola']],
@@ -2061,27 +2103,39 @@ body.pho #ph13{display:block}
       ['back', 'Espalda y cuello', ['Nada', 'Mochila', 'Capa', 'Alas de ángel', 'Alas de mariposa', 'Bufanda', 'Cola de zorro']]
     ];
     const LCOLS = [['hair', 'Color de cabello'], ['top', 'Color ropa de arriba'], ['bot', 'Color parte de abajo'], ['shoe', 'Color zapatos'], ['det', 'Color detalles y accesorios']];
-    const PRESETS = [
-      ['Escolar', { topS: 6, top: '#ffffff', botS: 3, bot: '#2a3f7a', shoeS: 2, shoe: '#3b2a3a', det: '#e8505b', back: 1, hat: 0, face: 0 }],
-      ['Invierno', { topS: 1, top: '#e8505b', botS: 1, bot: '#3b4866', shoeS: 1, shoe: '#7a3f3a', det: '#ffffff', hat: 1, back: 5, face: 0 }],
-      ['Kimono', { topS: 4, top: '#b794f6', botS: 4, bot: '#4a6fd8', shoeS: 0, shoe: '#ffd6e0', det: '#ffe066', hat: 8, back: 0, face: 0 }],
-      ['Aventura', { topS: 2, top: '#9be37a', botS: 2, bot: '#c9a56b', shoeS: 1, shoe: '#7a3f3a', det: '#c9a56b', hat: 2, back: 1, face: 0 }],
-      ['Gatito', { topS: 1, top: '#f5e6d3', botS: 3, bot: '#ff8fb0', shoeS: 4, shoe: '#ffffff', det: '#ff8fb0', hat: 3, back: 6, face: 0 }],
-      ['Ángel', { topS: 7, top: '#ffffff', botS: 4, bot: '#ffffff', shoeS: 0, shoe: '#ffffff', det: '#ffe066', hat: 9, back: 3, face: 0 }],
-      ['Cool', { topS: 2, top: '#222222', botS: 1, bot: '#222222', shoeS: 3, shoe: '#e8505b', det: '#e8505b', hat: 6, back: 0, face: 2 }],
-      ['Hada', { topS: 0, top: '#b794f6', botS: 3, bot: '#ff8fb0', shoeS: 0, shoe: '#ffd6e0', det: '#ff8fb0', hat: 4, back: 4, face: 0 }]
-    ];
+    const PRESETS = {
+      m: [
+        ['Escolar', { topS: 8, top: '#ffffff', botS: 1, bot: '#2a3f7a', shoeS: 2, shoe: '#3b2a3a', det: '#e8505b', back: 1, hat: 0, face: 0 }],
+        ['Invierno', { topS: 1, top: '#e8505b', botS: 1, bot: '#3b4866', shoeS: 1, shoe: '#7a3f3a', det: '#ffffff', hat: 1, back: 5, face: 0 }],
+        ['Elegante', { topS: 9, top: '#ffffff', botS: 1, bot: '#222222', shoeS: 2, shoe: '#3b2a3a', det: '#2a3f7a', hat: 0, back: 0, face: 0 }],
+        ['Aventura', { topS: 2, top: '#9be37a', botS: 2, bot: '#c9a56b', shoeS: 1, shoe: '#7a3f3a', det: '#c9a56b', hat: 2, back: 1, face: 0 }],
+        ['Deportivo', { topS: 1, top: '#4a6fd8', botS: 2, bot: '#222222', shoeS: 3, shoe: '#ffffff', det: '#ffffff', hat: 6, back: 0, face: 0 }],
+        ['Cool', { topS: 2, top: '#222222', botS: 1, bot: '#222222', shoeS: 3, shoe: '#e8505b', det: '#e8505b', hat: 6, back: 0, face: 2 }],
+        ['Ángel', { topS: 3, top: '#ffffff', botS: 1, bot: '#ffffff', shoeS: 0, shoe: '#ffffff', det: '#ffe066', hat: 9, back: 3, face: 0 }]
+      ],
+      f: [
+        ['Escolar', { topS: 6, top: '#ffffff', botS: 3, bot: '#2a3f7a', shoeS: 2, shoe: '#3b2a3a', det: '#e8505b', back: 1, hat: 0, face: 0 }],
+        ['Invierno', { topS: 1, top: '#e8505b', botS: 1, bot: '#3b4866', shoeS: 1, shoe: '#7a3f3a', det: '#ffffff', hat: 1, back: 5, face: 0 }],
+        ['Kimono', { topS: 4, top: '#b794f6', botS: 4, bot: '#4a6fd8', shoeS: 0, shoe: '#ffd6e0', det: '#ffe066', hat: 8, back: 0, face: 0 }],
+        ['Aventura', { topS: 2, top: '#9be37a', botS: 2, bot: '#c9a56b', shoeS: 1, shoe: '#7a3f3a', det: '#c9a56b', hat: 2, back: 1, face: 0 }],
+        ['Gatito', { topS: 1, top: '#f5e6d3', botS: 3, bot: '#ff8fb0', shoeS: 4, shoe: '#ffffff', det: '#ff8fb0', hat: 3, back: 6, face: 0 }],
+        ['Ángel', { topS: 7, top: '#ffffff', botS: 4, bot: '#ffffff', shoeS: 0, shoe: '#ffffff', det: '#ffe066', hat: 9, back: 3, face: 0 }],
+        ['Cool', { topS: 2, top: '#222222', botS: 1, bot: '#222222', shoeS: 3, shoe: '#e8505b', det: '#e8505b', hat: 6, back: 0, face: 2 }],
+        ['Hada', { topS: 0, top: '#b794f6', botS: 3, bot: '#ff8fb0', shoeS: 0, shoe: '#ffd6e0', det: '#ff8fb0', hat: 4, back: 4, face: 0 }]
+      ]
+    };
     function buildLook() {
       const b = mLook.body; b.innerHTML = '';
       const g = gk(G10F);
       const setK = (k, v) => { const c = getLook(G10F); c[k] = v; LOOKS[g] = c; saveLooks(); setChar(G10F); };
       const sec = t => b.appendChild(el('h3', null, null, t));
       const row = () => { const r = el('div', 'lkr'); b.appendChild(r); return r; };
+      b.appendChild(el('p', 'em', null, G10F ? 'Ropa de mujer · Emily' : 'Ropa de hombre · Leo'));
       sec('Outfits rápidos');
       { const r = row();
-        PRESETS.forEach(p => { const x = el('button', 'lkb', null, p[0]); x.onclick = () => { LOOKS[g] = Object.assign(getLook(G10F), p[1]); saveLooks(); setChar(G10F); buildLook(); }; r.appendChild(x); });
+        PRESETS[g].forEach(p => { const x = el('button', 'lkb', null, p[0]); x.onclick = () => { LOOKS[g] = Object.assign(getLook(G10F), p[1]); saveLooks(); setChar(G10F); buildLook(); }; r.appendChild(x); });
         const al = el('button', 'lkb', null, 'Aleatorio');
-        al.onclick = () => { const P = a => Math.floor(Math.random() * a), C = () => SW[P(SW.length)], c = {}; LCOLS.forEach(q => c[q[0]] = C()); LCATS.forEach(q => c[q[0]] = P(q[2].length)); LOOKS[g] = Object.assign(getLook(G10F), c); saveLooks(); setChar(G10F); buildLook(); };
+        al.onclick = () => { const P = a => Math.floor(Math.random() * a), C = () => SW[P(SW.length)], c = {}; LCOLS.forEach(q => c[q[0]] = C()); LCATS.forEach(q => { const o = LALLOW[q[0]][g]; c[q[0]] = o[P(o.length)]; }); LOOKS[g] = Object.assign(getLook(G10F), c); saveLooks(); setChar(G10F); buildLook(); };
         const rs = el('button', 'lkb', null, 'Original'); rs.onclick = () => { delete LOOKS[g]; saveLooks(); setChar(G10F); buildLook(); };
         r.append(al, rs); }
       const cur = getLook(G10F);
@@ -2094,7 +2148,12 @@ body.pho #ph13{display:block}
       });
       LCATS.forEach(([k, t, names]) => {
         sec(t); const r = row();
-        names.forEach((n, i) => { const x = el('button', 'lkb' + (cur[k] === i ? ' on' : ''), null, n); x.onclick = () => { setK(k, i); [...r.children].forEach((q, j) => q.classList.toggle('on', j === i)); }; r.appendChild(x); });
+        names.forEach((n, i) => {
+          if (!lkOK(g, k, i)) return;
+          const x = el('button', 'lkb' + (cur[k] === i ? ' on' : ''), null, n); x.dataset.i = i;
+          x.onclick = () => { setK(k, i); [...r.children].forEach(q => q.classList.toggle('on', +q.dataset.i === i)); };
+          r.appendChild(x);
+        });
       });
     }
     addItem('Vestuario', () => { buildLook(); mOpen('lk13'); });
@@ -3959,4 +4018,23 @@ st('cuerpo',()=>{
 })();
 </script>
 
+<script>
+/* v29: calienta la escena detrás de la cortina y revela el título cuando todo está estable */
+(function(){
+ const B=document.getElementById('boot');if(!B)return;
+ const t0=performance.now();let fr=0,calm=0,fontsOK=false,shown=false,last=t0;
+ const reveal=()=>{if(shown)return;shown=true;document.body.dataset.ph='title';B.classList.add('out');setTimeout(()=>{try{B.remove()}catch(e){}},2000)};
+ const df=document.fonts;
+ const fp=df&&df.load?Promise.all([df.load('600 40px Cinzel'),df.load('700 16px Nunito')]).catch(()=>0):Promise.resolve();
+ Promise.race([fp,new Promise(r=>setTimeout(r,2500))]).then(()=>{fontsOK=true});
+ function tick(now){
+  if(shown)return;fr++;const dt=now-last;last=now;
+  if(fr===3){try{ren.compile(scene,cam)}catch(e){}}
+  if(fr>5){if(dt<45)calm++;else calm=0}
+  if(fontsOK&&now-t0>1500&&calm>=14)reveal();
+  else if(now-t0>9000)reveal();
+  else requestAnimationFrame(tick)}
+ requestAnimationFrame(tick);setTimeout(reveal,12000);
+})();
+</script>
 </body></html>
